@@ -1,4 +1,6 @@
 import Link from 'next/link'
+
+import styles from './links.modules.css'
 const Links =()=>{
 
     const links =[
@@ -15,9 +17,13 @@ const Links =()=>{
             title:"Books",
             path:"/books",
         },
+        {
+            title:"Blog",
+            path:"/blog",
+        },
     ];
     return(
-        <div>
+        <div className={styles.links}>
              {links.map((link) => (
         <Link href={link.path} key={link.title}>
           {link.title}
